@@ -22,11 +22,6 @@ public class LoginActivity extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Gradies.otf");
         welcomeText.setTypeface(custom_font);
 
-
-
-
-
-
         final ImageView mainIcon = (ImageView) findViewById(R.id.mainIcon);
 
         final TextView loginText = (TextView) findViewById(R.id.loginText);
