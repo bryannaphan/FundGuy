@@ -17,35 +17,52 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="fundGuy"
+            android:gravity="center_horizontal"
+            android:textSize="80dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcomeText"
+            android:layout_marginTop="15dp" />
 
         <ImageView
             android:id="@+id/mainIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher"
+            android:background="@drawable/fundguy"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="56dp" />
-
+            android:scaleY="1"
+            android:scaleX="1"
+            android:padding="70dp"
+            android:layout_marginBottom="5dp" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="106dp">
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_weight="0.10"
+            android:paddingTop="10dp">
 
             <TextView
                 android:text="Login: "
-                android:layout_width="match_parent"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/loginText" />
+                android:id="@+id/loginText"
+                android:contextClickable="false" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:maxLines="1"
-                android:ems="10"
                 android:id="@+id/loginEdit" />
 
 
@@ -54,20 +71,19 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="96dp">
+            android:layout_height="wrap_content"
+            android:clickable="true">
 
             <TextView
                 android:text="Password: "
-                android:layout_width="match_parent"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/passwordText" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Password"
                 android:maxLines="1"
-                android:ems="10"
                 android:id="@+id/passwordEdit" />
 
         </LinearLayout>
