@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity
@@ -37,7 +38,23 @@ public class MainActivity extends AppCompatActivity
             }
         });
         ListView lv = (ListView) findViewById(R.id.purchase_list);
+        itemAdapter = new ItemAdapter(getBaseContext(), true);
+        //itemAdapter.addItem(new Item("Title", 20, "Desc", "Cat"));
         lv.setAdapter(itemAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Start new activity with the new extra as its parameters
+                // Put position in extra
+
+
+                //Intent intent = new Intent(getBaseContext(), DetailsActivity.class);
+                //
+                // startActivity(intent);
+            }
+        });
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

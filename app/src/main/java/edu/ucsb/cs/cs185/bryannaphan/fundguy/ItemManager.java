@@ -13,11 +13,13 @@ public class ItemManager {
     private static ItemManager instance = new ItemManager();
     private ItemManagerListener listener;
 
+
     public static ItemManager getInstance() {
         if (instance == null)
             instance = new ItemManager();
         return instance;
     }
+
 
     public int getSize(){
         return itemslist.size();
@@ -37,11 +39,13 @@ public class ItemManager {
     public void add(Item item) {
         itemslist.add(item);
         listener.onUpdate();
+        //notifyAll();
     }
 
     public void clear(Item item) {
         itemslist.clear();
         listener.onUpdate();
+        //notifyAll();
     }
 
     public Item get(int index) {
