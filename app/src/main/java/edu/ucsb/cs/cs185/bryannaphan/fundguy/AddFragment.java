@@ -77,6 +77,7 @@ public class AddFragment extends DialogFragment {
 
         final EditText title = (EditText) in.findViewById(R.id.purchase_title);
         final EditText amount = (EditText) in.findViewById(R.id.amount);
+        final EditText  description = (EditText) in.findViewById(R.id.description);
         // ADD FUNCTIONALITY FOR CATEGORY
 
 
@@ -87,7 +88,7 @@ public class AddFragment extends DialogFragment {
             public void onClick(View view) {
                 // ONLY CREATE NOW, ADD EDIT FUNCTIONALITY LATER
                 // ALSO NEED TO ADD THE BITMAP STUFF
-                Item newItem = new Item(title.getText().toString(), Float.parseFloat(amount.getText().toString()), "Remember to allow user to input a description");
+                Item newItem = new Item(title.getText().toString(), Float.parseFloat(amount.getText().toString()), description.getText().toString());
                 ItemManager im = ItemManager.getInstance();
                 im.add(newItem);
                 AddFragment.this.dismiss();
