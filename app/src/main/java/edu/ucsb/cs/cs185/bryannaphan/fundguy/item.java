@@ -9,11 +9,13 @@ public class Item {
     private String title;
     private float amount;
     private String description;
+    private String category;
 
-    public Item(String title, float amount, String description) {
+    public Item(String title, float amount, String description, String category) {
         this.title = title;
         this.amount = amount;
         this.description = description;
+        this.category = category;
     }
 
     public String getTitle() {
@@ -27,5 +29,7 @@ public class Item {
     public String getDescription() {
         return description;
     }
+
+    public String getCategory() { return category; }
 
 }
