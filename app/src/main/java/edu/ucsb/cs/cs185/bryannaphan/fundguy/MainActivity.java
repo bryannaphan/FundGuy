@@ -91,7 +91,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.budget) {
 
         } else if (id == R.id.purchase_history) {
-
+            Intent myIntent = new Intent(MainActivity.this, HistoryActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            MainActivity.this.startActivity(myIntent);
         } else if (id == R.id.overview) {
             //Intent myIntent = new Intent(MainActivity.this, OverviewActivity.class);
             //myIntent.putExtra("key", value); //Optional parameters
