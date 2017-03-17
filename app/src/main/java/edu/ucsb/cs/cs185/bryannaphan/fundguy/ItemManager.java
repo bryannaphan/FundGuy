@@ -19,6 +19,10 @@ public class ItemManager {
         return instance;
     }
 
+    public int getSize(){
+        return itemslist.size();
+    }
+
     // Private constructor
     private ItemManager() {
         this.itemslist = new ArrayList<>();
@@ -47,4 +51,9 @@ public class ItemManager {
     public void setListener(ItemManagerListener listener) {
         this.listener = listener;
     }
+
+    public interface ItemManagerListener {
+        public void onUpdate();
+    }
+
 }

@@ -23,10 +23,8 @@ public class LoginActivity extends AppCompatActivity {
 //        welcomeText.setTypeface(custom_font);
 
         final ImageView mainIcon = (ImageView) findViewById(R.id.mainIcon);
-
         final TextView loginText = (TextView) findViewById(R.id.loginText);
         final TextView passwordText = (TextView) findViewById(R.id.passwordText);
-
         final EditText loginEdit = (EditText) findViewById(R.id.loginEdit);
         final EditText passwordEdit = (EditText) findViewById(R.id.passwordEdit);
 
