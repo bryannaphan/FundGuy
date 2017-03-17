@@ -19,12 +19,10 @@ public class MyBarDataSet extends BarDataSet {
     public int getColor(int index) {
         float indexVal = getEntryForXIndex(index).getVal();
 
-        if (indexVal <= 50)
+        if (indexVal <= 60)
             return mColors.get(0);
-        else if (indexVal > 50 && indexVal <= 150)
+        else
             return mColors.get(1);
-        else if (indexVal > 150 && indexVal <= 300)
-            return mColors.get(2);
-        else return mColors.get(3);
+
     }
 }

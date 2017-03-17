@@ -28,9 +28,17 @@ public class HistoryActivity extends AppCompatActivity {
 
         Random r = new Random();
         List<Float> dataList = new ArrayList<>();
-        for(int i = 0; i<20; i++){
-            dataList.add((float) (r.nextInt(300-25)+25));
-        }
+        dataList.add((float) 47);
+        dataList.add((float) 68);
+        dataList.add((float) 14);
+        dataList.add((float) 45);
+        dataList.add((float) 32);
+        dataList.add((float) 28);
+        dataList.add((float) 3);
+
+        //for(int i = 0; i<20; i++){
+        //dataList.add((float) (r.nextInt(300-25)+25));
+        //}
 
         BarData barData2 = new BarData(MPUtil.getXAxisValues(20), MPUtil.getDataSet(HistoryActivity.this, dataList));
 
