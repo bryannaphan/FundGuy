@@ -30,7 +30,7 @@ public class AddFragment extends DialogFragment {
 
     }
 
-  public void onEdit(PurchaseContent.Reminder reminder, Boolean edit){
+    public void onEdit(PurchaseContent.Reminder reminder, Boolean edit) {
         this.reminder = reminder;
         this.edit = edit;
 
