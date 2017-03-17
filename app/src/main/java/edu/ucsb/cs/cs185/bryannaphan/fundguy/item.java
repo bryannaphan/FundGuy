@@ -10,6 +10,7 @@ public class Item {
     private float amount;
     private String description;
 
+
     public Item(String title, float amount, String description) {
         this.title = title;
         this.amount = amount;
