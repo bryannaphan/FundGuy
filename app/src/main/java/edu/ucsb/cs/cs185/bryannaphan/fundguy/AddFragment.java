@@ -14,10 +14,13 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -30,10 +33,12 @@ import static edu.ucsb.cs.cs185.bryannaphan.fundguy.R.id.imageButton;
 import static java.lang.Integer.parseInt;
 
 
-public class AddFragment extends DialogFragment {
+public class AddFragment extends DialogFragment  {
     Boolean edit;
     Item item;
     private static int SELECT_PICTURE = 1;
+
+
 
     @Override
     public void onDismiss(DialogInterface dialog){
@@ -79,8 +84,16 @@ public class AddFragment extends DialogFragment {
         final EditText title = (EditText) in.findViewById(R.id.purchase_title);
         final EditText amount = (EditText) in.findViewById(R.id.amount);
         final EditText  description = (EditText) in.findViewById(R.id.description);
-        // ADD FUNCTIONALITY FOR CATEGORY
+        final Spinner category = (Spinner) in.findViewById(R.id.spinner);
 
+        List<String> categories = new ArrayList<String>();
+        categories.add("Bills");
+        categories.add("Food");
+        categories.add("Treat Yo Self");
+        categories.add("Other");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, categories);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        category.setAdapter(dataAdapter);
 
 
         Button save = (Button) in.findViewById(R.id.save);
@@ -89,7 +102,8 @@ public class AddFragment extends DialogFragment {
             public void onClick(View view) {
                 // ONLY CREATE NOW, ADD EDIT FUNCTIONALITY LATER
                 // ALSO NEED TO ADD THE BITMAP STUFF
-                Item newItem = new Item(title.getText().toString(), Float.parseFloat(amount.getText().toString()), description.getText().toString());
+                Item newItem = new Item(title.getText().toString(), Float.parseFloat(amount.getText().toString()),
+                        description.getText().toString(), category.getSelectedItem().toString());
                 ItemManager im = ItemManager.getInstance();
                 im.add(newItem);
                 AddFragment.this.dismiss();
