@@ -48,8 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:layout_weight="0.10"
-            android:paddingTop="10dp">
+            android:layout_weight="0.10">
 
             <TextView
                 android:text="Login: "
@@ -60,7 +59,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="22dp"
                 android:inputType="text"
                 android:maxLines="1"
                 android:id="@+id/loginEdit" />
@@ -82,7 +81,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="22dp"
                 android:maxLines="1"
                 android:id="@+id/passwordEdit" />
 
@@ -95,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/mainIcon"
             android:layout_alignStart="@+id/mainIcon"
-            android:layout_marginTop="46dp" />
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 </RelativeLayout>

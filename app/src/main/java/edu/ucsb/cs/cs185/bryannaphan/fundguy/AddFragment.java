@@ -42,6 +42,7 @@ public class AddFragment extends DialogFragment {
 
   public void onEdit(Item item, Boolean edit){
         this.item = item;
+
         this.edit = edit;
 
     }
