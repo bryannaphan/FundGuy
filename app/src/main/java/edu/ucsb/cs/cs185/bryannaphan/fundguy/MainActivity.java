@@ -1,5 +1,6 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,10 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ItemAdapter itemAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity
                 fragment.show(fm, "Dialog Fragment");
             }
         });
+        ListView lv = (ListView) findViewById(R.id.purchase_list);
+        lv.setAdapter(itemAdapter);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -72,12 +76,17 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-            // Handle the camera action
+            Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+            MainActivity.this.startActivity(myIntent);
         } else if (id == R.id.budget) {
 
         } else if (id == R.id.purchase_history) {
 
         } else if (id == R.id.overview) {
+            //Intent myIntent = new Intent(MainActivity.this, OverviewActivity.class);
+            //myIntent.putExtra("key", value); //Optional parameters
+           // MainActivity.this.startActivity(myIntent);
 
         }
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
