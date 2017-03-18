@@ -1,4 +1,6 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
+import android.widget.Adapter;
+
 import java.util.ArrayList;
 
 /**
@@ -8,10 +10,11 @@ import java.util.ArrayList;
 public class ItemManager {
 
     private Item item;
-
     private static ArrayList<Item> itemslist;
     private static ItemManager instance = new ItemManager();
     private ItemManagerListener listener;
+    public static ItemAdapter adapter;
+
 
 
     public static ItemManager getInstance() {
@@ -36,6 +39,10 @@ public class ItemManager {
         };
     }
 
+    public ArrayList getItemsList() {
+        return itemslist;
+    }
+
     public void add(Item item) {
         itemslist.add(item);
         listener.onUpdate();
@@ -58,6 +65,12 @@ public class ItemManager {
 
     public interface ItemManagerListener {
         public void onUpdate();
+    }
+
+    public static void updateItem(Item item, String newTitle, String newDescription, float newAmount) {
+        instance.add(item);
+        item.setNewDetails(newTitle, newDescription, newAmount);
+        adapter.notifyDataSetChanged();
     }
 
 }

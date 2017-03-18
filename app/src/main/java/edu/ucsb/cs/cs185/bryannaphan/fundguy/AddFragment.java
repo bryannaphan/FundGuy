@@ -114,5 +114,8 @@ public class AddFragment extends DialogFragment  {
 
    }
 
+    public interface DetailEditListener {
+        public void onEditReturnValue(ItemManager item);
+    }
 
 }

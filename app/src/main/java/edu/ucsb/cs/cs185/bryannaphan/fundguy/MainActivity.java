@@ -17,9 +17,14 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import static java.security.AccessController.getContext;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     ItemAdapter itemAdapter;
+    ItemManager.ItemManagerListener itemListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,9 @@ public class MainActivity extends AppCompatActivity
                 fragment.show(fm, "Dialog Fragment");
             }
         });
+
+
+        // itemListener.onUpdate();
         ListView lv = (ListView) findViewById(R.id.purchase_list);
         itemAdapter = new ItemAdapter(getBaseContext(), true);
         //itemAdapter.addItem(new Item("Title", 20, "Desc", "Cat"));
@@ -55,7 +63,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
+        // Navigation stuff
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -112,5 +120,26 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
             return true;
 
+    }
+
+    /*public void onUpdate() {
+        List<DataItems> newList = getNewList();
+
+        ItemAdapter adapter = new ItemAdapter(getContext());
+
+        //my adapter holds an internal list of DataItems
+        adapter.setList(newList);
+        mList.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+        mList.invalidateViews();
+        itemAdapter.notifyDataSetChanged();
+    }*/
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ItemManager.getInstance().getItemsList().clear();
+        ItemManager.getInstance().getItemsList();
+        itemAdapter.notifyDataSetChanged();
     }
 }
