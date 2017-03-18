@@ -127,6 +127,12 @@
 
             </LinearLayout>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/add_picture"
+                android:scaleType="centerCrop"
+                android:layout_height="90dp" />
+
             <Button
                 android:text="Save"
                 android:layout_width="wrap_content"

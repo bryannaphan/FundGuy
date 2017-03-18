@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -32,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
+import static edu.ucsb.cs.cs185.bryannaphan.fundguy.R.id.add_picture;
 import static edu.ucsb.cs.cs185.bryannaphan.fundguy.R.id.imageButton;
 import static java.lang.Integer.parseInt;
 
@@ -131,6 +133,8 @@ public class AddFragment extends DialogFragment  {
             try {
                 bm = MediaStore.Images.Media.getBitmap(getContext().getContentResolver(), imageUri);
                 ItemManager manager = ItemManager.getInstance();
+                ImageView imageView = (ImageView) getView().findViewById(add_picture);
+                imageView.setImageBitmap(bm);
             } catch (IOException e) {
                 System.err.println("Caught IOException: " + e.getMessage());
             }
