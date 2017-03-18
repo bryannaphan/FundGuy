@@ -2,8 +2,8 @@ package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.MediaStore;
-
 import java.io.IOException;
+import android.widget.Adapter;
 import java.util.ArrayList;
 
 /**
@@ -13,16 +13,19 @@ import java.util.ArrayList;
 public class ItemManager {
 
     private Item item;
-
     private static ArrayList<Item> itemslist;
     private static ItemManager instance = new ItemManager();
     private ItemManagerListener listener;
+    public static ItemAdapter adapter;
+
+
 
     public static ItemManager getInstance() {
         if (instance == null)
             instance = new ItemManager();
         return instance;
     }
+
 
     public int getSize(){
         return itemslist.size();
@@ -39,14 +42,20 @@ public class ItemManager {
         };
     }
 
+    public ArrayList getItemsList() {
+        return itemslist;
+    }
+
     public void add(Item item) {
         itemslist.add(item);
         listener.onUpdate();
+        //notifyAll();
     }
 
     public void clear(Item item) {
         itemslist.clear();
         listener.onUpdate();
+        //notifyAll();
     }
 
     public Item get(int index) {
@@ -60,4 +69,12 @@ public class ItemManager {
     public interface ItemManagerListener {
         public void onUpdate();
     }
+
+  /*
+    public static void updateItem(Item item, String newTitle, String newDescription, float newAmount) {
+        instance.add(item);
+        item.setNewDetails(newTitle, newDescription, newAmount);
+        adapter.notifyDataSetChanged();
+    }
+    */ 
 }

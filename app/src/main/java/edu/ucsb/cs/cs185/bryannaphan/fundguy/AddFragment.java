@@ -39,8 +39,6 @@ public class AddFragment extends DialogFragment  {
     Item item;
     private static int SELECT_PICTURE = 1;
 
-
-
     @Override
     public void onDismiss(DialogInterface dialog){
         super.onDismiss(dialog);
@@ -133,5 +131,10 @@ public class AddFragment extends DialogFragment  {
         }
     }
 
+ /*
+    public interface DetailEditListener {
+        public void onEditReturnValue(ItemManager item);
+    }
+*/ 
 
 }
