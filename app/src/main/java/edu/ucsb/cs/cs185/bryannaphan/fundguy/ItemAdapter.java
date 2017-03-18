@@ -19,6 +19,8 @@ import android.widget.TextView;
 public class ItemAdapter extends BaseAdapter {
     private Context context;
 
+
+
     public ItemAdapter(Context context, Boolean isList) {
         super();
         this.context = context;
@@ -42,6 +44,8 @@ public class ItemAdapter extends BaseAdapter {
         title.setText(ItemManager.getInstance().get(position).getTitle());
         amount.setText(String.format("%.2f", ItemManager.getInstance().get(position).getAmount()));
         return convertView;
+
+
     }
 
     // Returns the size of the list
@@ -55,6 +59,7 @@ public class ItemAdapter extends BaseAdapter {
     public Item getItem(int position) {
         // Get it to refer to the BitmapManager
         return ItemManager.getInstance().get(position);
+
     }
 
     @Override
@@ -62,9 +67,10 @@ public class ItemAdapter extends BaseAdapter {
         return position;
     }
 
-    public void addItem(Item item, Uri uri) {
+    public void addItem(Item item) {
         // get it to refer to the BitmapManager
         ItemManager.getInstance().add(item);
+        notifyDataSetChanged();
     }
 
 }
