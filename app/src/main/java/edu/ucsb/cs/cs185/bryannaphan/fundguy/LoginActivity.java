@@ -18,9 +18,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // Importing title font
-//        TextView welcomeText = (TextView)findViewById(R.id.welcomeText);
-//        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Gradies.otf");
-//        welcomeText.setTypeface(custom_font);
+        TextView welcomeText = (TextView)findViewById(R.id.welcomeText);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Gradies.otf");
+        welcomeText.setTypeface(custom_font);
 
         final ImageView mainIcon = (ImageView) findViewById(R.id.mainIcon);
         final TextView loginText = (TextView) findViewById(R.id.loginText);
