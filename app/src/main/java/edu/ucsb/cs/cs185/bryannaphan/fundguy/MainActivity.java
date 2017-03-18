@@ -84,9 +84,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.purchase_history) {
 
         } else if (id == R.id.overview) {
-            //Intent myIntent = new Intent(MainActivity.this, OverviewActivity.class);
+            Intent myIntent = new Intent(MainActivity.this, OverviewActivity.class);
             //myIntent.putExtra("key", value); //Optional parameters
-           // MainActivity.this.startActivity(myIntent);
+            MainActivity.this.startActivity(myIntent);
 
         }
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
