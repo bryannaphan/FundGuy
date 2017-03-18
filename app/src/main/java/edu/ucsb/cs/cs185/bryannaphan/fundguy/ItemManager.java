@@ -1,6 +1,9 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
+import android.content.ContentResolver;
+import android.net.Uri;
+import android.provider.MediaStore;
+import java.io.IOException;
 import android.widget.Adapter;
-
 import java.util.ArrayList;
 
 /**
@@ -67,10 +70,11 @@ public class ItemManager {
         public void onUpdate();
     }
 
+  /*
     public static void updateItem(Item item, String newTitle, String newDescription, float newAmount) {
         instance.add(item);
         item.setNewDetails(newTitle, newDescription, newAmount);
         adapter.notifyDataSetChanged();
     }
-
+    */ 
 }
