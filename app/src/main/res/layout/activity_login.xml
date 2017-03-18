@@ -59,7 +59,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="22dp"
                 android:inputType="text"
                 android:maxLines="1"
                 android:id="@+id/loginEdit" />
@@ -81,7 +81,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="22dp"
                 android:maxLines="1"
                 android:id="@+id/passwordEdit" />
 

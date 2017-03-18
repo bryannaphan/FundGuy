@@ -1,10 +1,7 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
-import android.app.Activity;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -16,10 +13,4 @@ public class DetailsActivity extends AppCompatActivity {
 
 
     }
-
-    public void onEditReturnValue(ItemManager item) {
-        // do stuff here to set title
-
-    }
-
 }

@@ -8,7 +8,6 @@ public class Item {
 
     private String title;
     private float amount;
-
     private String description;
     private String category;
 
@@ -19,13 +18,9 @@ public class Item {
         this.category = category;
     }
 
-    public void setNewDetails(String newTitle, String newDescription, float newAmount) {
-        title = newTitle;
-        description = newDescription;
-        amount = newAmount;
+    public String getTitle() {
+        return title;
     }
-
-    public String getTitle() { return title; }
 
     public float getAmount() {
         return amount;
