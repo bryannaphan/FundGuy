@@ -29,6 +29,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.app.Activity.RESULT_OK;
 import static edu.ucsb.cs.cs185.bryannaphan.fundguy.R.id.imageButton;
 import static java.lang.Integer.parseInt;
 
@@ -45,7 +46,7 @@ public class AddFragment extends DialogFragment  {
         super.onDismiss(dialog);
     }
 
-  public void onEdit(Item item, Boolean edit){
+    public void onEdit(Item item, Boolean edit){
         this.item = item;
 
         this.edit = edit;
@@ -56,7 +57,6 @@ public class AddFragment extends DialogFragment  {
     }
 
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -85,6 +85,7 @@ public class AddFragment extends DialogFragment  {
         final EditText amount = (EditText) in.findViewById(R.id.amount);
         final EditText  description = (EditText) in.findViewById(R.id.description);
         final Spinner category = (Spinner) in.findViewById(R.id.spinner);
+        final ImageButton imageButton = (ImageButton) in.findViewById(R.id.imageButton);                //get the image/bitmap here
 
         List<String> categories = new ArrayList<String>();
         categories.add("Bills");
@@ -113,8 +114,24 @@ public class AddFragment extends DialogFragment  {
 
 
        return in;
-
    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //ImageView imageView;
+
+        if (requestCode == SELECT_PICTURE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            try {
+                Uri uri = data.getData();
+
+                //ItemManager.getInstance().add(getContentResolver(), uri);
+
+            } catch (Exception e) {
+                throw new RuntimeException(e.getMessage());
+            }
+        }
+    }
 
 
 }

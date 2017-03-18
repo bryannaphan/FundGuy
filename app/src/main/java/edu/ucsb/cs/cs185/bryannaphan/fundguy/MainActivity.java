@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
         ListView lv = (ListView) findViewById(R.id.purchase_list);
+        itemAdapter = new ItemAdapter(getBaseContext(), true);
         lv.setAdapter(itemAdapter);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
