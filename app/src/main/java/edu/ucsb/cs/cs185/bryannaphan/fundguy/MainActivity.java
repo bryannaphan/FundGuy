@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity
         // itemListener.onUpdate();
         ListView lv = (ListView) findViewById(R.id.purchase_list);
         itemAdapter = new ItemAdapter(getBaseContext(), true);
-        //itemAdapter.addItem(new Item("Title", 20, "Desc", "Cat"));
         lv.setAdapter(itemAdapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
