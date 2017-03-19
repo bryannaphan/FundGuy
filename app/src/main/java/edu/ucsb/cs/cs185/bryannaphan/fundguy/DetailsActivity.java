@@ -22,8 +22,11 @@ public class DetailsActivity extends AppCompatActivity {
         TextView titleView = (TextView) findViewById(R.id.titleDetail);
         titleView.setText(title);
 
+        // TODO: Get the amount to print with two decimal places
         TextView amountView = (TextView) findViewById(R.id.amountDetail);
         amountView.setText(amount.toString());
+        // amount.setText(String.format("%.2f", amount));
+
 
         TextView descriptionView = (TextView) findViewById(R.id.descriptionDetail);
         descriptionView.setText(description);
