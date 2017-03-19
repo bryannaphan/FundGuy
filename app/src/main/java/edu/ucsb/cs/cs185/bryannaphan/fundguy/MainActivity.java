@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity
 
         // Importing title font
         TextView monthText = (TextView)findViewById(R.id.month);
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Route159-BoldItalic.otf");
+        // Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Route159-BoldItalic.otf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/nevis.ttf");
         monthText.setTypeface(custom_font);
         monthText.setText(month);
 
@@ -51,8 +52,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 FragmentManager fm = getSupportFragmentManager();
                 AddFragment fragment = new AddFragment();
-                // Show DialogFragment
-                fragment.show(fm, "Dialog Fragment");
+                fragment.show(fm, "Add Fragment");
             }
         });
 
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.budget) {
-            // open budget fragment
+
         }
 
         else if (id == R.id.purchase_history) {

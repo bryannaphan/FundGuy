@@ -25,6 +25,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OverviewActivity" />
         <activity android:name=".DetailsActivity" />
+        <activity
+            android:name=".SetBudgetActivity"
+            android:label="@string/title_activity_set_budget"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

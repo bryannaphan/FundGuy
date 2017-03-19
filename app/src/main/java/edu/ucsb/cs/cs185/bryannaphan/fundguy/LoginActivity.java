@@ -22,18 +22,16 @@ public class LoginActivity extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/Gradies.otf");
         welcomeText.setTypeface(custom_font);
 
-        final ImageView mainIcon = (ImageView) findViewById(R.id.mainIcon);
+        /*final ImageView mainIcon = (ImageView) findViewById(R.id.mainIcon);
         final TextView loginText = (TextView) findViewById(R.id.loginText);
         final TextView passwordText = (TextView) findViewById(R.id.passwordText);
         final EditText loginEdit = (EditText) findViewById(R.id.loginEdit);
-        final EditText passwordEdit = (EditText) findViewById(R.id.passwordEdit);
-
+        final EditText passwordEdit = (EditText) findViewById(R.id.passwordEdit);*/
 
         final Button loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
-                //myIntent.putExtra("key", value); //Optional parameters
+                Intent myIntent = new Intent(LoginActivity.this, SetBudgetActivity.class);
                 LoginActivity.this.startActivity(myIntent);
             }
         });
