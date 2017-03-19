@@ -56,9 +56,9 @@ public class MainActivity extends AppCompatActivity
                                 clickedItem.getDescription(),
                         Toast.LENGTH_SHORT).show();
 
-                Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
-                detailsIntent.putExtra("position", position); // Pass in item position
-                MainActivity.this.startActivity(detailsIntent);
+                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
+                // detailsIntent.putExtra("position", position); // Pass in item position
+                 MainActivity.this.startActivity(detailsIntent);
             }}
         );
 

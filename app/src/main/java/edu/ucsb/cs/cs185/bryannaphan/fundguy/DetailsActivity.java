@@ -10,7 +10,8 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-
+        // Bundle extras = getIntent().getExtras();
+        // Integer position = extras.getInt("position");
 
     }
 }
