@@ -28,36 +28,32 @@
 
             <TextView
                 android:text="Title"
-                android:layout_width="wrap_content"
+                android:layout_width="227dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/titleDetail"
-                android:textSize="25dp"
-                android:layout_weight="0.83" />
+                android:textSize="25dp" />
 
             <TextView
-                android:text="$ "
+                android:text="$"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:id="@+id/AmountDetail" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/border"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:padding="15dp">
-
+                android:id="@+id/dollar_sign" />
             <TextView
-                android:text="Category"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/categoryDetail" />
+                android:text="Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:id="@+id/amountDetail" />
 
         </LinearLayout>
+
+        <TextView
+            android:text="Description"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionDetail"
+            android:layout_weight="0.10" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -66,12 +62,40 @@
             android:id="@+id/imageView"
             android:layout_weight="0.59" />
 
-        <Button
-            android:text="Edit"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:id="@+id/editButton" />
+            android:background="@drawable/border"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:text="Category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/categoryDetail" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+            <Button
+                android:text="Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:id="@+id/editButton" />
+
+            <Button
+                android:text="Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:id="@+id/deleteButton" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
