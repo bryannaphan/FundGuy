@@ -45,9 +45,9 @@ public class ItemAdapter extends BaseAdapter {
         TextView amount  = (TextView) convertView.findViewById(R.id.single_item_amount);
         TextView date = (TextView) convertView.findViewById(R.id.date);
         TextView category = (TextView) convertView.findViewById(R.id.single_item_category);
-        //ImageView iv = (ImageView) convertView.findViewById(R.id.test_view);
+        // ImageView image = (ImageView) convertView.findViewById(R.id.imageView); //??
 
-        //iv.setImageBitmap(ItemManager.getInstance().get(position).getBitmap());
+        // image.setImageBitmap(ItemManager.getInstance().get(position).getBitmap()); // ??
         date.setText(ItemManager.getInstance().get(position).getDate());
         title.setText(ItemManager.getInstance().get(position).getTitle());
         amount.setText(String.format("%.2f", ItemManager.getInstance().get(position).getAmount()));
