@@ -3,237 +3,129 @@
 
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/design/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_03fb6341ca8ba964b933206d678412ec621ee66b.jar" />
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.3.0_f4f3ff468157bedd5f007dfd7c72a5b69cf1e988.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_265e5288f67f869a31fb81c352662f3d2b6b38af.jar" />
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.3.0_c3ac8dc86d76747eeac3f09b78d50dd64a674c88.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_1d04bd7be19db08d3776957604991c727786f482.jar" />
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.3.0_7afd14e11bb5c22b9b6663fb017b598b36a5a3c9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_91c2f39a101586094ed231a18f2473a59e646c18.jar" />
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.3.0_654f59cf07d3d35fd358cb5e15a8d5ed56bdfbdb.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_0e5deec2c08b898afc8cf0e107a991deb97133f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_5bd8054845b4e2a4b01a0adb4f3774806ba88d05.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_eb7013465b14001f6bb8bbb3238a4cf6920913d9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.1_bf52d108e9a59d4ab92f8489939febfe9aad18b3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_0663876cd3d3225b3aebbfa3a7bf34c0eb089a26.jar" />
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.3.0_e7635611bc5be320f66a7cedaa1f6349bc506ce3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_55a0ed210dbc030f085ebd73090468375c17a978.jar" />
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.3.0_d5a760040148732975d89bbf08d6243ffbb46b86.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_593e0d0ddd2dab36cf5c6820776d106115fef047.jar" />
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.3.0_33ad2c37b081e99f03334910d7d1751d4941c883.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_7eba1311ef8b17f7b57c1704d4e29c5cf37af0cf.jar" />
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.3.0_74decc70a02d35b0a593188286ae6576d1cafefd.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_a528cce5f295462e6dd5fb39afe44f7a27df4043.jar" />
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.0_219e6e464fb3819499938a05f09d2db26aff549e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.github.paolorotolo/appintro/4.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_16085ee47213339c846fd9c30f987bffd4566fc7.jar" />
+        sha1="461cd433c2723981c7536d60acfcf3d86f3105fb">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.github.paolorotolo-appintro-4.1.0_bb119414c8dabdac33c609aeb967a1676047e8b3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_75ce5426274ac67273caff1bbd11d983a7b0c505.jar" />
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.3.0_872d5a16a797c723050b2864c03623c84148dcef.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.0/support-annotations-25.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_8288b0669a3914084100cacee3c951b36d4ed90d.jar" />
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.0_6ddda8f0cae83383ec66330e38d74d5a0c50e782.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.1_ee9fcf3c4333ac732e261fcad24ab1f1ef5b3ea8.jar" />
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.3.0_2b44fd7e66aa86c99f9102d47254efa072298840.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_cfc1b082a03a0d9a6b57d54dcd8f02ad4106e44c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_a37ac92a76db8d4abd8d85ef384909539594e3f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_9e75e49574ed9ea4e1e98cffdb697d192aef0046.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_67799854592111a580a77b467d07af8725d65aad.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_5deb482a00466d2d01dd482d995e3360ff2c4a7c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_863fb12a6f30a0b7167ee257fb3a5e794b63ce5b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.1/369f9aa48a629b4e92557b37326f42dc3de796e4/MPAndroidChart-v3.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="369f9aa48a629b4e92557b37326f42dc3de796e4">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/MPAndroidChart-v3.0.1_beda5699b1ab1bba67cbd41f8f6607986ebab5be.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.1_bf960df3e3db4df7ad274d88dd44df68ef6cc6c3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="/Users/bryannaphan/Desktop/FundGuy copy 2 george with bitmaps/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_bc0ea65336796a055e9cbea0420349aa9e1957cd.jar" />
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.3.0_43fb8d5259da8466b78877300e92e8c46ec520c9.jar" />
     </item>
 
 </items>
