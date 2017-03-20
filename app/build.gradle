@@ -17,6 +17,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // For swipe intro library
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile 'com.android.support:support-v4:25.+'
+    }
+    dependencies {
+        compile 'com.android.support:support-v4:25.+'
+    }
+    dependencies {
+        compile 'com.android.support:support-v4:25.+'
+    }
+    dependencies {
+        compile 'com.github.paolorotolo:appintro:4.1.0'
+    }
 }
 
 dependencies {
@@ -34,12 +51,4 @@ dependencies {
 
 repositories {
     maven { url "https://jitpack.io" }
-}
-
-// For swipe intro library
-repositories {
-    mavenCentral()
-}
-dependencies {
-    compile 'com.github.paolorotolo:appintro:4.1.0'
 }
