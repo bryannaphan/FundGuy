@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -124,8 +126,14 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(myIntent);
         }
 
-        else if (id == R.id.budget) {
-
+        else if (id == R.id.budget) { // TODO: Not sure if working?
+            /*
+            Fragment budgetFragment = new SetBudgetFragment();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.content_main, budgetFragment); //Container -> R.id.contentFragment
+            transaction.commit();
+            */
         }
 
         else if (id == R.id.purchase_history) {
