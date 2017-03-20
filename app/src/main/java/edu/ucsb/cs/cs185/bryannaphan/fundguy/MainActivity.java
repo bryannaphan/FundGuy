@@ -1,9 +1,9 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -12,11 +12,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,14 +32,25 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Getting Month
+        Calendar cal = Calendar.getInstance();
+        String month = String.format(Locale.US,"%tB",cal).toUpperCase();
+
+        // Importing title font
+        TextView monthText = (TextView)findViewById(R.id.month);
+        // Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Route159-BoldItalic.otf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/nevis.ttf");
+        monthText.setTypeface(custom_font);
+        monthText.setText(month);
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentManager fm = getSupportFragmentManager();
-                AddFragment fragment = new AddFragment();
-                // Show DialogFragment
-                fragment.show(fm, "Dialog Fragment");
+                AddItemFragment fragment = new AddItemFragment();
+                fragment.show(fm, "Add Fragment");
             }
         });
 
@@ -111,7 +125,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         else if (id == R.id.budget) {
-            // open budget fragment
+
         }
 
         else if (id == R.id.purchase_history) {
