@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context="edu.ucsb.cs.cs185.bryannaphan.fundguy.SetBudgetFragment">
 
     <LinearLayout
@@ -13,7 +13,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:background="@color/white">
+        android:background="@color/backgroundColor">
 
         <TextView
             android:text="Set your monthly budget: "

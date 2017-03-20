@@ -47,7 +47,7 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(layoutResId, container, false);
 
         // Importing title font
-        TextView welcomeText = (TextView) container.findViewById(R.id.titleText);
+        TextView welcomeText = (TextView) view.findViewById(R.id.titleText);
         Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Gradies.otf");
         welcomeText.setTypeface(custom_font);
 
