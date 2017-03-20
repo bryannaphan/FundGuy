@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,6 +34,10 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         init();
         final List<BarEntry> entries = new ArrayList<>();
         int entriesCount = ItemManager.getInstance().getSize();
@@ -52,59 +57,44 @@ public class HistoryActivity extends AppCompatActivity {
         chart.invalidate(); // refresh
         chart.setVisibleXRangeMaximum(6f);
         chart.setScaleEnabled(false);
-        //chart.getAxisLeft().setDrawGridLines(false);
-        //chart.getAxisRight().setDrawGridLines(false);
-        //chart.getXAxis().setDrawGridLines(false);
         chart.getXAxis().setEnabled(false);
-        //chart.getAxisLeft().setEnabled(false);
         chart.getAxisRight().setEnabled(false);
+        chart.getAxisLeft().setAxisMinimum(0);
+        //chart.getXAxis().setValueFormatter()
+
 
         chart.animateXY(3000, 3000);
+
+        chart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+            @Override
+            public void onValueSelected(Entry e, Highlight h) {
+                String entryTitle = ItemManager.getInstance().get(Math.round(e.getX())).getTitle();
+                String entryDescription = ItemManager.getInstance().get(Math.round(e.getX())).getDescription();
+                String entryCategory = ItemManager.getInstance().get(Math.round(e.getX())).getCategory();
+                String entryInfo = "Title: " + entryTitle + "\n" + "Description: " + entryDescription + "\n" + "Category: " + entryCategory;
+
+                TextView textView = (TextView) findViewById(R.id.entryInfo);
+                textView.setText(entryInfo);
+            }
+
+            @Override
+            public void onNothingSelected() {
+                //do nothing for now
+            }
+        });
 
         final Button buttonDay = (Button) findViewById(R.id.entriesDay);
         final Button buttonWeek = (Button) findViewById(R.id.entriesWeek);
         final Button buttonMonth = (Button) findViewById(R.id.entriesMonth);
         final Button buttonEntry = (Button) findViewById(R.id.entries);
 
-
-
         buttonDay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //switch bar chart such that one bar = one day
-                buttonDay.setBackgroundColor(Color.DKGRAY);
+                /* buttonDay.setBackgroundColor(Color.DKGRAY);
                 buttonWeek.setBackgroundColor(Color.GRAY);
                 buttonMonth.setBackgroundColor(Color.GRAY);
-                buttonEntry.setBackgroundColor(Color.GRAY);
-            }
-        });
-
-        buttonWeek.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //switch bar chart such that one bar = one day
-                buttonDay.setBackgroundColor(Color.GRAY);
-                buttonWeek.setBackgroundColor(Color.DKGRAY);
-                buttonMonth.setBackgroundColor(Color.GRAY);
-                buttonEntry.setBackgroundColor(Color.GRAY);
-            }
-        });
-
-        buttonMonth.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //switch bar chart such that one bar = one day
-                buttonDay.setBackgroundColor(Color.GRAY);
-                buttonWeek.setBackgroundColor(Color.GRAY);
-                buttonMonth.setBackgroundColor(Color.DKGRAY);
-                buttonEntry.setBackgroundColor(Color.GRAY);
-            }
-        });
-
-        buttonEntry.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //switch bar chart such that one bar = one day
-                buttonDay.setBackgroundColor(Color.GRAY);
-                buttonWeek.setBackgroundColor(Color.GRAY);
-                buttonMonth.setBackgroundColor(Color.GRAY);
-                buttonEntry.setBackgroundColor(Color.DKGRAY);
+                buttonEntry.setBackgroundColor(Color.GRAY); */
 
                 List<BarEntry> entries = new ArrayList<>();
                 int entriesCount = ItemManager.getInstance().getSize();
@@ -113,7 +103,17 @@ public class HistoryActivity extends AppCompatActivity {
                     xPosition = i;
                     entries.add(new BarEntry((float)xPosition, ((float)ItemManager.getInstance().get(i).getAmount())));
                 }
-                BarDataSet set = new BarDataSet(entries, "BarDataSet");
+
+                int mondayMoney = 0;
+
+                /*for (int i =0; i<entriesCount; i++) {
+                    xPosition = i;
+                    //if((float) ItemManager.getInstance().get(i).getDate() == )
+                    //mondayMoney += (float)ItemManager.getInstance().get
+                } */
+
+
+                BarDataSet set = new BarDataSet(entries, "Dollars Spent");
                 BarData data = new BarData(set);
                 data.setBarWidth(0.9f); // set custom bar width
                 chart.setData(data);
@@ -126,20 +126,66 @@ public class HistoryActivity extends AppCompatActivity {
             }
         });
 
-        chart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
-            @Override
-            public void onValueSelected(Entry e, Highlight h) {
-                TextView textView = (TextView) findViewById(R.id.entryInfo);
-                textView.setText(ItemManager.getInstance().get(Math.round(e.getX())).getTitle());
-            }
-
-            @Override
-            public void onNothingSelected() {
-                //do nothing for now
+        buttonWeek.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //switch bar chart such that one bar = one day
+                /* buttonDay.setBackgroundColor(Color.GRAY);
+                buttonWeek.setBackgroundColor(Color.DKGRAY);
+                buttonMonth.setBackgroundColor(Color.GRAY);
+                buttonEntry.setBackgroundColor(Color.GRAY); */
             }
         });
 
+        buttonMonth.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //switch bar chart such that one bar = one day
+                /* buttonDay.setBackgroundColor(Color.GRAY);
+                buttonWeek.setBackgroundColor(Color.GRAY);
+                buttonMonth.setBackgroundColor(Color.DKGRAY);
+                buttonEntry.setBackgroundColor(Color.GRAY); */
+            }
+        });
 
+        buttonEntry.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //switch bar chart such that one bar = one day
+                /* buttonDay.setBackgroundColor(Color.GRAY);
+                buttonWeek.setBackgroundColor(Color.GRAY);
+                buttonMonth.setBackgroundColor(Color.GRAY);
+                buttonEntry.setBackgroundColor(Color.DKGRAY); */
+
+                List<BarEntry> entries = new ArrayList<>();
+                int entriesCount = ItemManager.getInstance().getSize();
+                int xPosition = 0;
+                for(int i = 0; i<entriesCount; i++) {
+                    xPosition = i;
+                    entries.add(new BarEntry((float)xPosition, ((float)ItemManager.getInstance().get(i).getAmount())));
+                }
+                BarDataSet set = new BarDataSet(entries, "Dollars Spent");
+                BarData data = new BarData(set);
+                data.setBarWidth(0.9f); // set custom bar width
+                chart.setData(data);
+                chart.setFitBars(true); // make the x-axis fit exactly all bars
+                chart.invalidate(); // refresh
+                chart.setVisibleXRangeMaximum(6f);
+                chart.setScaleEnabled(false);
+                chart.getXAxis().setEnabled(false);
+                chart.getAxisRight().setEnabled(false);
+
+                chart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
+                    @Override
+                    public void onValueSelected(Entry e, Highlight h) {
+                        TextView textView = (TextView) findViewById(R.id.entryInfo);
+                        textView.setText(ItemManager.getInstance().get(Math.round(e.getX())).getTitle());
+                    }
+
+                    @Override
+                    public void onNothingSelected() {
+                        //do nothing for now
+                    }
+                });
+            }
+        });
     }
 
     private void init() {
