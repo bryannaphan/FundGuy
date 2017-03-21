@@ -35,6 +35,7 @@ public class OverviewActivity extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Monthly Overview");
 
 
         final PieChart pieChart = (PieChart) findViewById(R.id.chart);
@@ -80,7 +81,7 @@ public class OverviewActivity extends AppCompatActivity {
 
         PieDataSet dataSet = new PieDataSet(entries, "");
         PieData data = new PieData(dataSet);
-
+        pieChart.getDescription().setText("");
         // change the colors cause thats fun :D
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
         pieChart.setData(data);

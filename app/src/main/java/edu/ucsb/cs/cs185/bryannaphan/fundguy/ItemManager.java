@@ -2,6 +2,7 @@ package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.v7.widget.RecyclerView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,6 +45,11 @@ public class ItemManager {
     public void add(Item item) {
         itemslist.add(item);
         listener.onUpdate();
+    }
+
+    public static void removeItem(Item item){
+        itemslist.remove(item);
+        // TODO: fuck me up fam
     }
 
     public void clear(Item item) {

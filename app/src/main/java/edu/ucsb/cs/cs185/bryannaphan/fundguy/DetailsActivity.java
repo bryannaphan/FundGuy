@@ -2,8 +2,12 @@ package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import static android.system.Os.close;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -17,6 +21,8 @@ public class DetailsActivity extends AppCompatActivity {
         String description = extras.getString("description");
         Float amount = extras.getFloat("amount");
         String category = extras.getString("category");
+
+        final int position = extras.getInt("position");
         // Image image = extras.get ???
 
         TextView titleView = (TextView) findViewById(R.id.titleDetail);
@@ -37,5 +43,15 @@ public class DetailsActivity extends AppCompatActivity {
         // ImageView image = (ImageView) findViewById(R.id.imageView); //??
         // image.setImageBitmap(ItemManager.getInstance().get(position).getBitmap()); // ??
 
+        Button deleteButton = (Button) findViewById(R.id.deleteButton);
+        deleteButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                ItemManager.removeItem(ItemManager.getInstance().get(position));
+
+                finish();
+            }
+        });
     }
 }

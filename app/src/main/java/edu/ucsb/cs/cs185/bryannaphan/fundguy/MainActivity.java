@@ -80,6 +80,9 @@ public class MainActivity extends AppCompatActivity
                 detailsIntent.putExtra("description", clickedItem.getDescription());
                 detailsIntent.putExtra("category", clickedItem.getCategory());
                 detailsIntent.putExtra("image", clickedItem.getBitmap());
+
+                detailsIntent.putExtra("position",position);
+
                 MainActivity.this.startActivity(detailsIntent);
             }}
         );
