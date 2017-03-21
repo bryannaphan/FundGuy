@@ -1,7 +1,13 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.icu.text.SelectFormat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+
+import com.github.mikephil.charting.charts.Chart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -25,6 +31,15 @@ public class OverviewActivity extends AppCompatActivity {
 
         // Link elements from layout xml
         setContentView(R.layout.activity_overview);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Monthly Overview");
+
 
         final PieChart pieChart = (PieChart) findViewById(R.id.chart);
 
@@ -35,13 +50,6 @@ public class OverviewActivity extends AppCompatActivity {
         categories.add("Treat Yo Self");
         categories.add("Other");
 
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("January");
-        labels.add("February");
-        labels.add("March");
-        labels.add("April");
-        labels.add("May");
-        labels.add("June");
 
         float sumHome=0; float sumFood=0; float sumTrans=0; float sumTreat=0; float sumOther=0;
 
@@ -76,10 +84,13 @@ public class OverviewActivity extends AppCompatActivity {
 
         PieDataSet dataSet = new PieDataSet(entries, "");
         PieData data = new PieData(dataSet);
-
+        pieChart.getDescription().setText("");
         // change the colors cause thats fun :D
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
         pieChart.setData(data);
+
+        pieChart.setHoleColor(Color.parseColor("#e8ddce"));
+
         pieChart.invalidate(); // refresh
     }
 }

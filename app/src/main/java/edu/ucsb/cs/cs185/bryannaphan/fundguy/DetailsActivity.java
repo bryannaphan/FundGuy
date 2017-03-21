@@ -2,10 +2,15 @@ package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import static android.system.Os.close;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -15,7 +20,8 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         Bundle extras = getIntent().getExtras();
-        int index = extras.getInt("index");
+
+        final int index = extras.getInt("index");
         ItemManager im = ItemManager.getInstance();
         Item current = im.get(index);
 
@@ -34,6 +40,16 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.imageView);
         image.setImageBitmap(current.getBitmap());
 
+        Button deleteButton = (Button) findViewById(R.id.deleteButton);
+        deleteButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                ItemManager.removeItem(ItemManager.getInstance().get(index));
+                //refresh the listener sumhow
+                finish();
+            }
+        });
     }
 
     /*

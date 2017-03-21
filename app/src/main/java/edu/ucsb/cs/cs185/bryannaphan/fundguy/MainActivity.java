@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity
 
                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
-                // Pass in item info
                 detailsIntent.putExtra("index", ItemManager.getInstance().getIndex(clickedItem));
+
                 MainActivity.this.startActivity(detailsIntent);
             }}
         );

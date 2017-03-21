@@ -7,7 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/fundguyTheme1">
 
         <!--
         <activity android:name=".LoginActivity">
@@ -28,17 +28,27 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/fundguyTheme1" />
         <activity
             android:name=".HistoryActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OverviewActivity" />
-        <activity android:name=".DetailsActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fundguyTheme1" />
+        <activity android:name=".OverviewActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/fundguyTheme1"
+            />
+        <activity android:name=".DetailsActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fundguyTheme1"
+            />
         <activity
             android:name=".BudgetDetails"
             android:label="@string/title_activity_budget_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fundguyTheme1"></activity>
+
     </application>
 
 </manifest>
