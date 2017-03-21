@@ -120,6 +120,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/bryannaphan/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v3.0.1/369f9aa48a629b4e92557b37326f42dc3de796e4/MPAndroidChart-v3.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="369f9aa48a629b4e92557b37326f42dc3de796e4">
+        <dex dex="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/pre-dexed/debug/MPAndroidChart-v3.0.1_beda5699b1ab1bba67cbd41f8f6607986ebab5be.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/bryannaphan/Desktop/FundGuy/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"

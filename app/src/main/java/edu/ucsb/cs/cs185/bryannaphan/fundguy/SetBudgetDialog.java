@@ -1,5 +1,6 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -16,14 +17,13 @@ import android.widget.EditText;
 
 public class SetBudgetDialog extends DialogFragment {
 
-
     /**
      * A simple {@link Fragment} subclass.
      */
 
-
     private static final String ARG_LAYOUT_RES_ID = "layoutResId";
     private int layoutResId;
+    public Item item;
 
     public static edu.ucsb.cs.cs185.bryannaphan.fundguy.SetBudgetFragment newInstance(int layoutResId) {
         edu.ucsb.cs.cs185.bryannaphan.fundguy.SetBudgetFragment setBudgetFragment = new edu.ucsb.cs.cs185.bryannaphan.fundguy.SetBudgetFragment();
@@ -55,13 +55,14 @@ public class SetBudgetDialog extends DialogFragment {
         final EditText amount = (EditText) view.findViewById(R.id.budgetAmount);
         final Button setBudgetButton = (Button) view.findViewById(R.id.setBudgetButton);
 
-
         setBudgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Setting the budget
                 Budget.getInstance().setBudget(Integer.parseInt(amount.getText().toString()));
-                BudgetEditListener listener = (BudgetEditListener) getTargetFragment();
-                //listener.onEditReturnValue(Budget.getInstance().getBudget());
+
+                BudgetEditListener listener = (BudgetEditListener) getActivity();
+                listener.onEditReturnValue(Budget.getInstance().getBudget());
                 getDialog().dismiss();
                 //Intent myIntent = new Intent(getActivity(), MainActivity.class);
                 //getActivity().startActivity(myIntent);
@@ -80,6 +81,10 @@ public class SetBudgetDialog extends DialogFragment {
         return view;
     }
 
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+    }
 
     public interface BudgetEditListener {
         public void onEditReturnValue(float mBudget);
