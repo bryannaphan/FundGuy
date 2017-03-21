@@ -42,8 +42,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
             android:id="@+id/progressBar"
-            android:layout_height="40dp"
-            android:progressDrawable="@android:color/holo_green_dark" />
+            android:layout_height="40dp" />
 
         <LinearLayout
             android:orientation="horizontal"

@@ -145,7 +145,7 @@ public class AddItemDialog extends DialogFragment  {
                     ItemManager.getInstance().get(index).setCategory(newcategoryStr);
 
                     // Attempt to get new budget amount
-                    ItemManager.getInstance().get(index).setAmountLeft(newAmountStr);
+                    //ItemManager.getInstance().get(index).setAmountLeft(newAmountStr);
 
                     ItemManager.getInstance().listener.onUpdate();
 

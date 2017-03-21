@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -107,6 +108,15 @@ public class MainActivity extends AppCompatActivity
         summary.setText(String.format("%.2f", Budget.getInstance().getBudget()));
         spent_money.setText( String.format("%.2f", sum));
         amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
+
+        ProgressBar pBar = (ProgressBar) findViewById(R.id.progressBar);
+        pBar.setProgress(50);
+        pBar.setScaleY(7f);
+        pBar.getProgressDrawable().setColorFilter(
+                getResources().getColor(R.color.color1), android.graphics.PorterDuff.Mode.SRC_IN);
+
+        pBar.setMax(Math.round(Budget.getInstance().getBudget()));
+        pBar.setProgress(Math.round(Budget.getInstance().getBudget() - sum));
 
         // Navigation
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
