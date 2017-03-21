@@ -24,8 +24,8 @@ public class Item {
         this.description = description;
         this.category = category;
         Calendar cc = Calendar.getInstance();
-        int year=cc.get(Calendar.YEAR);
-        int month=cc.get(Calendar.MONTH);
+        int year = cc.get(Calendar.YEAR);
+        int month = cc.get(Calendar.MONTH) + 1;
         int mDay = cc.get(Calendar.DAY_OF_MONTH);
         this.date = month+"/"+mDay+"/"+year;
         this.bitmap = bitmap;
