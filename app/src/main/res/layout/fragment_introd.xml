@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="edu.ucsb.cs.cs185.bryannaphan.fundguy.introdFragment">
+
+    <TextView
+        android:id="@+id/textz"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="casual"
+        android:lineSpacingExtra="14sp"
+        android:selectAllOnFocus="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="150dp"
+        android:layout_gravity="top"
+        android:text="FundGuy \n \n \n Set a monthly a budget. \n\n CREATE an entry, ATTACH a photo, SAVE for later viewing.\n \n View purchases with the SPENDING HISTORY BAR GRAPH. \n \n See where your money's going with the CATEGORY PIE GRAPH."
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</FrameLayout>

@@ -69,6 +69,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.entryInfo);
         textView.setText("Click on a bar to display information");
+        textView.setTextSize(22);
 
         chart.setOnChartValueSelectedListener(new OnChartValueSelectedListener() {
             @Override
@@ -81,6 +82,7 @@ public class HistoryActivity extends AppCompatActivity {
 
                 TextView textView = (TextView) findViewById(R.id.entryInfo);
                 textView.setText(entryInfo);
+                textView.setTextSize(22);
             }
 
             @Override
@@ -88,6 +90,7 @@ public class HistoryActivity extends AppCompatActivity {
                 //do nothing for now
                 TextView textView = (TextView) findViewById(R.id.entryInfo);
                 textView.setText("Click on a bar to display information");
+                textView.setTextSize(22);
             }
         });
 
@@ -129,35 +132,43 @@ public class HistoryActivity extends AppCompatActivity {
                         TextView textView = (TextView) findViewById(R.id.entryInfo);
                         if (e == entries.get(0)) {
                             textView.setText("Date: March 14th, 2017" + "\n" + "Total Money Spent: $23 " + "\n" +
-                            "Purchases: Panda Express, Cardboard");
+                                    "Purchases: Panda Express, Cardboard");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(1)) {
                             textView.setText("Date: March 15th, 2017" + "\n" + "Total Money Spent: $52 " + "\n" +
                                     "Purchases: Birthday Present For Donny, Yerbamate");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(2)) {
                             textView.setText("Date: March 16th, 2017" + "\n" + "Total Money Spent: $17 " + "\n" +
                                     "Purchases: Dress Shirt, Tie");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(3)) {
                             textView.setText("Date: March 17th, 2017" + "\n" + "Total Money Spent: $40 " + "\n" +
                                     "Purchases: Bed Frame, Hana Kitchen");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(4)) {
                             textView.setText("Date: March 18th, 2017" + "\n" + "Total Money Spent: $62 " + "\n" +
                                     "Purchases: Groceries Trader Joes, Movies");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(5)) {
                             textView.setText("Date: March 19th, 2017" + "\n" + "Total Money Spent: $17 " + "\n" +
                                     "Purchases: Balloons, Candles, Cake");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(6)) {
                             textView.setText("Date: March 20th, 2017" + "\n" + "Total Money Spent: $110 " + "\n" +
                                     "Purchases: Disneyland Tickets");
+                            textView.setTextSize(22);
                         }
                         else if (e == entries.get(7)) {
                             textView.setText("Date: March 21st, 2017" + "\n" + "Total Money Spent: $82 " + "\n" +
                                     "Purchases: New Speakers, laptop case");
+                            textView.setTextSize(22);
                         }
                     }
                     @Override
@@ -165,6 +176,7 @@ public class HistoryActivity extends AppCompatActivity {
                         //do nothing for now
                         TextView textView = (TextView) findViewById(R.id.entryInfo);
                         textView.setText("Click on a bar to display information");
+                        textView.setTextSize(22);
                     }
                 });
             }
@@ -212,6 +224,7 @@ public class HistoryActivity extends AppCompatActivity {
 
                         TextView textView = (TextView) findViewById(R.id.entryInfo);
                         textView.setText(entryInfo);
+                        textView.setTextSize(22);
                     }
 
                     @Override
@@ -219,6 +232,7 @@ public class HistoryActivity extends AppCompatActivity {
                         //do nothing for now
                         TextView textView = (TextView) findViewById(R.id.entryInfo);
                         textView.setText("Click on a bar to display information");
+                        textView.setTextSize(22);
                     }
                 });
             }
