@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#000000</color>
+
+    <color name="color1">#309116</color>
+    <color name="color2">#ff0000</color>
+    <color name="greenMedium">#506d56</color>
+    <color name="backgroundColor">#e8ddce</color>
+    <color name="primary_dark_material_light_1">#f5f5f5</color>
+    <color name="textColor">#000000</color>
+
+    <!-- New Green theme colors -->
+    <color name="colorMedium">#506d56</color>
+    <color name="colorLight">#f5f5f5</color>
+    <color name="colorDark">#314927</color>
+    <color name="colorAccent2">#FF6EB5B1</color>
+
+</resources>
