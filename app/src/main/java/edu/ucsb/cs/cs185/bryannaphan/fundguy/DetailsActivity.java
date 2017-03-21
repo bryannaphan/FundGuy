@@ -2,6 +2,8 @@ package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,27 +14,16 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-
         Bundle extras = getIntent().getExtras();
         int index = extras.getInt("index");
         ItemManager im = ItemManager.getInstance();
         Item current = im.get(index);
-//        String title = extras.getString("title");
-//        String description = extras.getString("description");
-//        Float amount = extras.getFloat("amount");
-//        String category = extras.getString("category");
-//        // Image image = extras.get ???
-
-
 
         TextView titleView = (TextView) findViewById(R.id.titleDetail);
         titleView.setText(current.getTitle());
 
-        // TODO: Get the amount to print with two decimal places
         TextView amountView = (TextView) findViewById(R.id.amountDetail);
         amountView.setText(String.format("%.2f", current.getAmount()));
-        // amount.setText(String.format("%.2f", amount));
-
 
         TextView descriptionView = (TextView) findViewById(R.id.descriptionDetail);
         descriptionView.setText(current.getDescription());
@@ -44,4 +35,16 @@ public class DetailsActivity extends AppCompatActivity {
         image.setImageBitmap(current.getBitmap());
 
     }
+
+    /*
+    // Toolbar back button
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
+    }*/
 }
