@@ -74,11 +74,6 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent,
                                     View view, int position, long id) {
                 Item clickedItem = (Item) parent.getItemAtPosition(position);
-                Toast.makeText(MainActivity.this,
-                        "Clicked item:\n" +
-                                clickedItem.getTitle() + ": " +
-                                clickedItem.getDescription(),
-                        Toast.LENGTH_SHORT).show();
 
                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
@@ -100,13 +95,13 @@ public class MainActivity extends AppCompatActivity
         amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
 
         ProgressBar pBar = (ProgressBar) findViewById(R.id.progressBar);
-        pBar.setMax(Math.round(Budget.getInstance().getBudget()));
-        pBar.setProgress(Math.round(Budget.getInstance().getBudget() - sum));
-
-
-        pBar.setScaleY(2f);
+        pBar.setProgress(50);
+        pBar.setScaleY(7f);
         pBar.getProgressDrawable().setColorFilter(
                 getResources().getColor(R.color.color1), android.graphics.PorterDuff.Mode.SRC_IN);
+
+        pBar.setMax(Math.round(Budget.getInstance().getBudget()));
+        pBar.setProgress(Math.round(Budget.getInstance().getBudget() - sum));
 
         // Navigation
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
