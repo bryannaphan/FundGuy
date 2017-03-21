@@ -5,9 +5,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,11 +15,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -29,9 +26,22 @@ import java.util.Locale;
 import static edu.ucsb.cs.cs185.bryannaphan.fundguy.R.id.budget;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        ItemManager.ItemManagerListener { // AddItemDialog.EditItemListener,
 
     ItemAdapter itemAdapter;
+
+    /*public void onEditReturnValue(Item item) {
+        TextView textAmount = (TextView) findViewById(R.id.total_spent);
+        textAmount.setText(String.format("%.2f", item.getAmount()));
+    }*/
+
+    // Updating the total spent summary section
+    public void onUpdate() {
+        TextView textAmount = (TextView) findViewById(R.id.total_spent);
+        textAmount.setText(String.format("%.2f", ItemManager.getInstance().totalSpent()));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +55,9 @@ public class MainActivity extends AppCompatActivity
 
         // Importing title font
         TextView monthText = (TextView)findViewById(R.id.month);
-        // Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Route159-BoldItalic.otf");
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/nevis.ttf");
         monthText.setTypeface(custom_font);
         monthText.setText(month);
-
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -57,7 +65,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 FragmentManager fm = getSupportFragmentManager();
-                AddItemFragment fragment = new AddItemFragment();
+                AddItemDialog fragment = new AddItemDialog();
                 fragment.show(fm, "Add Fragment");
             }
         });
@@ -85,14 +93,16 @@ public class MainActivity extends AppCompatActivity
                 MainActivity.this.startActivity(detailsIntent);
             }}
         );
-        TextView summary = (TextView) findViewById(R.id.summary);
+
+        TextView summary = (TextView) findViewById(R.id.summary); // the budget
         TextView spent_money = (TextView) findViewById(R.id.total_spent);
+        TextView amount_left = (TextView) findViewById(R.id.amount_left);
+
 
         float sum = ItemManager.getInstance().totalSpent();
         if(sum <= 0.0){
             spent_money.setTextColor(Color.RED);
         }
-        TextView amount_left = (TextView) findViewById(R.id.amount_left);
         summary.setText(String.format("%.2f", Budget.getInstance().getBudget()));
         spent_money.setText( String.format("%.2f", sum));
         amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
@@ -157,7 +167,7 @@ public class MainActivity extends AppCompatActivity
 
         else if (id == budget) {
             // TODO: Not sure if working?
-            Intent myIntent = new Intent(MainActivity.this, BudgetDetails.class);
+            Intent myIntent = new Intent(MainActivity.this, BudgetDetailsActivity.class);
             MainActivity.this.startActivity(myIntent);
             /*
             Fragment budgetFragment = new SetBudgetFragment();

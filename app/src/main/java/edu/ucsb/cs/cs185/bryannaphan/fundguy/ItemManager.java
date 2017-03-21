@@ -16,13 +16,14 @@ public class ItemManager {
 
     private static ArrayList<Item> itemslist;
     private static ItemManager instance = new ItemManager();
-    private ItemManagerListener listener;
+    public ItemManagerListener listener;
 
     public float totalSpent(){
         float sum = 0;
         for(int i = 0; i<itemslist.size(); i++){
             sum += itemslist.get(i).getAmount();
         }
+        listener.onUpdate();
         return sum;
     }
 
@@ -54,6 +55,11 @@ public class ItemManager {
 
     public void add(Item item) {
         itemslist.add(item);
+        listener.onUpdate();
+    }
+
+    public void removeItem(Item item){
+        itemslist.remove(item);
         listener.onUpdate();
     }
 

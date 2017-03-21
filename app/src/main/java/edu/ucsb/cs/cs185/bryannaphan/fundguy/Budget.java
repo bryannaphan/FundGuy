@@ -16,15 +16,16 @@ public class Budget {
         return instance;
     }
 
-    public float getBudget(){
+    public float getBudget() {
         return budget;
     }
 
-    public void setBudget(int amount){
+    public void setBudget(float amount){
         this.budget = amount;
+        //listener.onChange();
     }
 
-    public interface BudgetListener{
+    public interface BudgetListener {
         public void onChange();
     }
 

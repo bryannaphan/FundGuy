@@ -51,5 +51,23 @@ public class Item {
 
     public Bitmap getBitmap() { return bitmap; }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setBitmap(Bitmap image) {
+        this.bitmap = image;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }

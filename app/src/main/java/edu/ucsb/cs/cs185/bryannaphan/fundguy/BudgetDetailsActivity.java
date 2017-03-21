@@ -13,10 +13,10 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-public class BudgetDetails extends AppCompatActivity
+public class BudgetDetailsActivity extends AppCompatActivity
         implements SetBudgetDialog.BudgetEditListener {
 
-    // Listener for edit
+    // Listener for isNew
     public void onEditReturnValue(float budget) {
         TextView budget_text = (TextView) findViewById(R.id.text_budget);
         budget_text.setText(String.format("%.2f", Budget.getInstance().getBudget()));

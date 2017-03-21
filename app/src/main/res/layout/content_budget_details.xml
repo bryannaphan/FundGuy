@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="edu.ucsb.cs.cs185.bryannaphan.fundguy.BudgetDetails"
+    tools:context="edu.ucsb.cs.cs185.bryannaphan.fundguy.BudgetDetailsActivity"
     tools:showIn="@layout/activity_budget_details">
 
     <TextView
