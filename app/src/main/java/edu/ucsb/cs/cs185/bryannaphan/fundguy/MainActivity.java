@@ -75,11 +75,7 @@ public class MainActivity extends AppCompatActivity
                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
                 // Pass in item info
-                detailsIntent.putExtra("title", clickedItem.getTitle());
-                detailsIntent.putExtra("amount", clickedItem.getAmount());
-                detailsIntent.putExtra("description", clickedItem.getDescription());
-                detailsIntent.putExtra("category", clickedItem.getCategory());
-                detailsIntent.putExtra("image", clickedItem.getBitmap());
+                detailsIntent.putExtra("index", ItemManager.getInstance().getIndex(clickedItem));
                 MainActivity.this.startActivity(detailsIntent);
             }}
         );

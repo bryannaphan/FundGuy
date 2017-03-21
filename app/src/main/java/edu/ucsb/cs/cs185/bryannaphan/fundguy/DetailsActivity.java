@@ -12,30 +12,36 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+
         Bundle extras = getIntent().getExtras();
-        String title = extras.getString("title");
-        String description = extras.getString("description");
-        Float amount = extras.getFloat("amount");
-        String category = extras.getString("category");
-        // Image image = extras.get ???
+        int index = extras.getInt("index");
+        ItemManager im = ItemManager.getInstance();
+        Item current = im.get(index);
+//        String title = extras.getString("title");
+//        String description = extras.getString("description");
+//        Float amount = extras.getFloat("amount");
+//        String category = extras.getString("category");
+//        // Image image = extras.get ???
+
+
 
         TextView titleView = (TextView) findViewById(R.id.titleDetail);
-        titleView.setText(title);
+        titleView.setText(current.getTitle());
 
         // TODO: Get the amount to print with two decimal places
         TextView amountView = (TextView) findViewById(R.id.amountDetail);
-        amountView.setText(amount.toString());
+        amountView.setText(String.format("%.2f", current.getAmount()));
         // amount.setText(String.format("%.2f", amount));
 
 
         TextView descriptionView = (TextView) findViewById(R.id.descriptionDetail);
-        descriptionView.setText(description);
+        descriptionView.setText(current.getDescription());
 
         TextView categoryView = (TextView) findViewById(R.id.categoryDetail);
-        categoryView.setText(category);
+        categoryView.setText(current.getCategory());
 
-        // ImageView image = (ImageView) findViewById(R.id.imageView); //??
-        // image.setImageBitmap(ItemManager.getInstance().get(position).getBitmap()); // ??
+        ImageView image = (ImageView) findViewById(R.id.imageView);
+        image.setImageBitmap(current.getBitmap());
 
     }
 }

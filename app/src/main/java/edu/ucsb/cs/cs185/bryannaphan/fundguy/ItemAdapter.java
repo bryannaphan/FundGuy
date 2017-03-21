@@ -52,6 +52,8 @@ public class ItemAdapter extends BaseAdapter {
         title.setText(ItemManager.getInstance().get(position).getTitle());
         amount.setText(String.format("%.2f", ItemManager.getInstance().get(position).getAmount()));
         category.setText(ItemManager.getInstance().get(position).getCategory());
+
+
         return convertView;
     }
 
