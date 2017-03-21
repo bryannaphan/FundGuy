@@ -82,11 +82,12 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent,
                                     View view, int position, long id) {
                 Item clickedItem = (Item) parent.getItemAtPosition(position);
-                Toast.makeText(MainActivity.this,
+
+                /*Toast.makeText(MainActivity.this,
                         "Clicked item:\n" +
                                 clickedItem.getTitle() + ": " +
                                 clickedItem.getDescription(),
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();*/
 
                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
