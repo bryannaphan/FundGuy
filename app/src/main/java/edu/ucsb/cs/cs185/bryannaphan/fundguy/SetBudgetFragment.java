@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 /**
@@ -48,16 +50,19 @@ public class SetBudgetFragment extends Fragment {
         View view = inflater.inflate(layoutResId, container, false);
 
         // TODO: Make this actually set the amount!
+        final EditText amount = (EditText) view.findViewById(R.id.budgetAmount);
         final Button setBudgetButton = (Button) view.findViewById(R.id.setBudgetButton);
-        /*
-        setBudgetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(getActivity(), MainActivity.class);
-                getActivity().startActivity(myIntent);
-            }
-        });
-*/
+
+
+//        setBudgetButton.setOnClickListener(new View.OnClickListener() {
+   //        @Override public void onClick(View v) {
+                //Budget.getInstance().setBudget(Integer.parseInt(amount.getText().toString()));
+                //SetBudgetFragment.this.dismiss();
+                //Intent myIntent = new Intent(getActivity(), MainActivity.class);
+                //getActivity().startActivity(myIntent);
+      //      }
+      //  });
+
         /*FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

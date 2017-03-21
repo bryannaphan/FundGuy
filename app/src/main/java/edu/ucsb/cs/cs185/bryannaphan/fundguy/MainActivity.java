@@ -1,6 +1,7 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,8 +21,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.Calendar;
 import java.util.Locale;
+
+import static edu.ucsb.cs.cs185.bryannaphan.fundguy.R.id.budget;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/nevis.ttf");
         monthText.setTypeface(custom_font);
         monthText.setText(month);
+
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -74,18 +80,22 @@ public class MainActivity extends AppCompatActivity
 
                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
-                // Pass in item info
-                detailsIntent.putExtra("title", clickedItem.getTitle());
-                detailsIntent.putExtra("amount", clickedItem.getAmount());
-                detailsIntent.putExtra("description", clickedItem.getDescription());
-                detailsIntent.putExtra("category", clickedItem.getCategory());
-                detailsIntent.putExtra("image", clickedItem.getBitmap());
-
-                detailsIntent.putExtra("position",position);
+                detailsIntent.putExtra("index", ItemManager.getInstance().getIndex(clickedItem));
 
                 MainActivity.this.startActivity(detailsIntent);
             }}
         );
+        TextView summary = (TextView) findViewById(R.id.summary);
+        TextView spent_money = (TextView) findViewById(R.id.total_spent);
+
+        float sum = ItemManager.getInstance().totalSpent();
+        if(sum <= 0.0){
+            spent_money.setTextColor(Color.RED);
+        }
+        TextView amount_left = (TextView) findViewById(R.id.amount_left);
+        summary.setText(String.format("%.2f", Budget.getInstance().getBudget()));
+        spent_money.setText( String.format("%.2f", sum));
+        amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
 
         // Navigation
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -96,6 +106,22 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+    public void onResume(){
+        super.onResume();
+        TextView summary = (TextView) findViewById(R.id.summary);
+        TextView spent_money = (TextView) findViewById(R.id.total_spent);
+
+        float sum = ItemManager.getInstance().totalSpent();
+        if(sum <= 0.0){
+            spent_money.setTextColor(Color.RED);
+        }
+        TextView amount_left = (TextView) findViewById(R.id.amount_left);
+        summary.setText(String.format("%.2f", Budget.getInstance().getBudget()));
+        spent_money.setText( String.format("%.2f", sum));
+        amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
+        // put your code here...
+
     }
 
     @Override
@@ -129,7 +155,10 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(myIntent);
         }
 
-        else if (id == R.id.budget) { // TODO: Not sure if working?
+        else if (id == budget) {
+            // TODO: Not sure if working?
+            Intent myIntent = new Intent(MainActivity.this, BudgetDetails.class);
+            MainActivity.this.startActivity(myIntent);
             /*
             Fragment budgetFragment = new SetBudgetFragment();
             FragmentManager fm = getSupportFragmentManager();
