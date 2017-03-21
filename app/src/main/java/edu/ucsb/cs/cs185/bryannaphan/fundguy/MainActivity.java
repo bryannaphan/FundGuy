@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         // Getting Month
         Calendar cal = Calendar.getInstance();
         String month = String.format(Locale.US,"%tB",cal).toUpperCase();
+
 
         // Importing title font
         TextView monthText = (TextView)findViewById(R.id.month);
@@ -97,6 +99,15 @@ public class MainActivity extends AppCompatActivity
         spent_money.setText( String.format("%.2f", sum));
         amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
 
+        ProgressBar pBar = (ProgressBar) findViewById(R.id.progressBar);
+        pBar.setMax(Math.round(Budget.getInstance().getBudget()));
+        pBar.setProgress(Math.round(Budget.getInstance().getBudget() - sum));
+
+
+        pBar.setScaleY(2f);
+        pBar.getProgressDrawable().setColorFilter(
+                getResources().getColor(R.color.color1), android.graphics.PorterDuff.Mode.SRC_IN);
+
         // Navigation
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -120,6 +131,14 @@ public class MainActivity extends AppCompatActivity
         summary.setText(String.format("%.2f", Budget.getInstance().getBudget()));
         spent_money.setText( String.format("%.2f", sum));
         amount_left.setText(String.format("%.2f", Budget.getInstance().getBudget() - sum));
+
+        ProgressBar pBar = (ProgressBar) findViewById(R.id.progressBar);
+        //pBar.setMax(100);
+        pBar.setMax(Math.round(Budget.getInstance().getBudget()));
+        pBar.setProgress(Math.round(Budget.getInstance().getBudget() - sum));
+        //pBar.setProgress(50);
+        pBar.getProgressDrawable().setColorFilter(
+                getResources().getColor(R.color.color1), android.graphics.PorterDuff.Mode.SRC_IN);
         // put your code here...
 
     }

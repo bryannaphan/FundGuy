@@ -20,7 +20,7 @@ public class Budget {
         return budget;
     }
 
-    public void setBudget(int amount){
+    public void setBudget(float amount){
         this.budget = amount;
     }
 

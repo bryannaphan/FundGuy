@@ -59,7 +59,7 @@ public class SetBudgetDialog extends DialogFragment {
         setBudgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Budget.getInstance().setBudget(Integer.parseInt(amount.getText().toString()));
+                Budget.getInstance().setBudget(Float.parseFloat(amount.getText().toString()));
                 BudgetEditListener listener = (BudgetEditListener) getTargetFragment();
                 //listener.onEditReturnValue(Budget.getInstance().getBudget());
                 getDialog().dismiss();
