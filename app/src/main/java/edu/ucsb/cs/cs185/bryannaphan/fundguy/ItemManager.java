@@ -18,7 +18,13 @@ public class ItemManager {
     private static ItemManager instance = new ItemManager();
     private ItemManagerListener listener;
 
-
+    public float totalSpent(){
+        float sum = 0;
+        for(int i = 0; i<itemslist.size(); i++){
+            sum += itemslist.get(i).getAmount();
+        }
+        return sum;
+    }
 
     public static ItemManager getInstance() {
         if (instance == null)
