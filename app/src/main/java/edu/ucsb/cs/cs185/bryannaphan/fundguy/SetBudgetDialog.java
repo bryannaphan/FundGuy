@@ -51,7 +51,6 @@ public class SetBudgetDialog extends DialogFragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_set_budget, container, false);
 
-        // TODO: Make this actually set the amount!
         final EditText amount = (EditText) view.findViewById(R.id.budgetAmount);
         final Button setBudgetButton = (Button) view.findViewById(R.id.setBudgetButton);
 

@@ -48,7 +48,7 @@ public class AddItemDialog extends DialogFragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View in = inflater.inflate(R.layout.add_fragment, container, false);
+        final View in = inflater.inflate(R.layout.add_fragment, container, false);
 
         Bundle args = getArguments();
         if (args != null) {
@@ -143,6 +143,9 @@ public class AddItemDialog extends DialogFragment  {
                     ItemManager.getInstance().get(index).setDescription(newDescriptionStr);
                     ItemManager.getInstance().get(index).setAmount(newAmountStr);
                     ItemManager.getInstance().get(index).setCategory(newcategoryStr);
+
+                    // Attempt to get new budget amount
+                    ItemManager.getInstance().get(index).setAmountLeft(newAmountStr);
 
                     ItemManager.getInstance().listener.onUpdate();
 

@@ -17,6 +17,7 @@ public class Item {
     private String category;
     private Bitmap bitmap;
     private String date;
+    private float newAmountLeft;
 
     public Item(String title, float amount, String description, String category, Bitmap bitmap) {
         this.title = title;
@@ -70,4 +71,14 @@ public class Item {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    /*
+    public void setAmountLeft(float amount) { //???
+        //newAmountLeft = (Budget.getInstance().getBudget() - ItemManager.getInstance().totalSpent());
+        this.newAmountLeft = Budget.getInstance().getBudget() - amount;
+    }
+
+    public float getAmountLeft() {
+        return this.newAmountLeft;
+    }*/
 }

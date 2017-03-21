@@ -31,15 +31,16 @@ public class MainActivity extends AppCompatActivity
 
     ItemAdapter itemAdapter;
 
-    /*public void onEditReturnValue(Item item) {
+    public void onEditReturnValue(Item item) {
         TextView textAmount = (TextView) findViewById(R.id.total_spent);
         textAmount.setText(String.format("%.2f", item.getAmount()));
-    }*/
+    }
 
     // Updating the total spent summary section
     public void onUpdate() {
-        TextView textAmount = (TextView) findViewById(R.id.total_spent);
+        TextView textAmount = (TextView) findViewById(R.id.summary);
         textAmount.setText(String.format("%.2f", ItemManager.getInstance().totalSpent()));
+        //textAmount.setText(String.format("hi"));
     }
 
     @Override
