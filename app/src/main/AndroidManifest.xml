@@ -32,6 +32,7 @@
         <activity
             android:name=".HistoryActivity"
             android:label="@string/app_name"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/fundguyTheme1" />
         <activity android:name=".OverviewActivity"
             android:parentActivityName=".MainActivity"
@@ -39,7 +40,14 @@
             android:theme="@style/fundguyTheme1"
             />
         <activity android:name=".DetailsActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fundguyTheme1"
+            />
+        <activity
+            android:name=".BudgetDetails"
+            android:label="@string/title_activity_budget_details"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/fundguyTheme1"></activity>
 
     </application>
 

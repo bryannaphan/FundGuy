@@ -1,10 +1,13 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.icu.text.SelectFormat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.github.mikephil.charting.charts.Chart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -85,6 +88,9 @@ public class OverviewActivity extends AppCompatActivity {
         // change the colors cause thats fun :D
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
         pieChart.setData(data);
+
+        pieChart.setHoleColor(Color.parseColor("#e8ddce"));
+
         pieChart.invalidate(); // refresh
     }
 }
