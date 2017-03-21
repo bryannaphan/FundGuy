@@ -47,7 +47,7 @@
             android:name=".BudgetDetails"
             android:label="@string/title_activity_budget_details"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/fundguyTheme1"></activity>
+            android:theme="@style/fundguyTheme1"/>
 
     </application>
 

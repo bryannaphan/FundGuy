@@ -1,5 +1,6 @@
 package edu.ucsb.cs.cs185.bryannaphan.fundguy;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Danielle on 3/20/2017.
@@ -58,6 +60,9 @@ public class SetBudgetDialog extends DialogFragment {
         setBudgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Context context = getContext();
+                Toast.makeText(context, "Budget Saved!!", Toast.LENGTH_SHORT).show();
+
                 // Setting the budget
                 Budget.getInstance().setBudget(Integer.parseInt(amount.getText().toString()));
 
