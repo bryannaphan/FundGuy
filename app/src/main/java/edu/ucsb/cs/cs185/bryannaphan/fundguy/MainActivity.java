@@ -75,11 +75,7 @@ public class MainActivity extends AppCompatActivity
                 Intent detailsIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
                 // Pass in item info
-                detailsIntent.putExtra("title", clickedItem.getTitle());
-                detailsIntent.putExtra("amount", clickedItem.getAmount());
-                detailsIntent.putExtra("description", clickedItem.getDescription());
-                detailsIntent.putExtra("category", clickedItem.getCategory());
-                detailsIntent.putExtra("image", clickedItem.getBitmap());
+                detailsIntent.putExtra("index", ItemManager.getInstance().getIndex(clickedItem));
                 MainActivity.this.startActivity(detailsIntent);
             }}
         );
@@ -126,7 +122,10 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(myIntent);
         }
 
-        else if (id == R.id.budget) { // TODO: Not sure if working?
+        else if (id == R.id.budget) {
+            // TODO: Not sure if working?
+            Intent myIntent = new Intent(MainActivity.this, BudgetDetails.class);
+            MainActivity.this.startActivity(myIntent);
             /*
             Fragment budgetFragment = new SetBudgetFragment();
             FragmentManager fm = getSupportFragmentManager();
