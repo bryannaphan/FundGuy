@@ -26,6 +26,11 @@ public class ItemManager {
         return instance;
     }
 
+
+    public int getIndex(Item item){
+        return itemslist.indexOf(item);
+    }
+
     public int getSize(){
         return itemslist.size();
     }

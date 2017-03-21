@@ -65,6 +65,7 @@ public class AddItemFragment extends DialogFragment  {
                 pickIntent.setType("image/*");
                 pickIntent.setAction(Intent.ACTION_GET_CONTENT);
                 Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
                 String pickTitle = "Select or take a new Picture"; // Or get from strings.xml
                 Intent chooserIntent = Intent.createChooser(pickIntent, pickTitle);
                 chooserIntent.putExtra
