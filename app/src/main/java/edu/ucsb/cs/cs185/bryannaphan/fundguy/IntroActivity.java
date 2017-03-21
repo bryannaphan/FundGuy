@@ -18,8 +18,8 @@ public class IntroActivity extends AppIntro {
         // AppIntro will automatically generate the dots indicator and buttons.
         addSlide(LoginFragment.newInstance(R.layout.fragment_login));
         addSlide(SetBudgetFragment.newInstance(R.layout.fragment_set_budget));
-        addSlide(AppIntroFragment.newInstance("slide title", "loonng description here", R.drawable.ic_arrow_back_white, getColor(R.color.colorAccent)));
-
+        //addSlide(introdFragment.newInstance(R.layout.fragment_introd));
+        addSlide(introdFragment.newInstance(R.layout.fragment_introd));//"slide title", "loonng description here", R.drawable.ic_arrow_back_white, getColor(R.color.colorAccent)));
         // OPTIONAL METHODS
         // Override bar/separator color.
         setBarColor(Color.parseColor("#506d56"));

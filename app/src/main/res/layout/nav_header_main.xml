@@ -14,7 +14,7 @@
         android:id="@+id/fundguy"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fundguy"
+        app:srcCompat="@drawable/fundguy_title"
         android:layout_marginTop="25dp" />
 
     <LinearLayout
