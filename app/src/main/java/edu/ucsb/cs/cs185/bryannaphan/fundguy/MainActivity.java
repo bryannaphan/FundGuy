@@ -126,7 +126,10 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(myIntent);
         }
 
-        else if (id == R.id.budget) { // TODO: Not sure if working?
+        else if (id == R.id.budget) {
+            // TODO: Not sure if working?
+            Intent myIntent = new Intent(MainActivity.this, BudgetDetails.class);
+            MainActivity.this.startActivity(myIntent);
             /*
             Fragment budgetFragment = new SetBudgetFragment();
             FragmentManager fm = getSupportFragmentManager();
