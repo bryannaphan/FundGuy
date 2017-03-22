@@ -62,8 +62,9 @@ public class AddItemDialog extends DialogFragment  {
         final ImageButton imageButton = (ImageButton) in.findViewById(R.id.imageButton);                //get the image/bitmap here
 
         List<String> categories = new ArrayList<String>();
-        categories.add("Bills");
+        categories.add("Home & Utilities");
         categories.add("Food");
+        categories.add("Transportation");
         categories.add("Treat Yo Self");
         categories.add("Other");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, categories);
